@@ -4,15 +4,46 @@ using UnityEngine;
 
 public class Storage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int _countChild;
+    private Transform[] _arrCellStorage;
+    //private string _typeComponent = "null";
+
+
+
+    private void Start()
     {
-        
+        _countChild = transform.childCount;
+        _arrCellStorage = new Transform[_countChild];
+        for (int i = 0; i < _countChild; i++)
+        {
+            _arrCellStorage[i] = gameObject.transform.GetChild(i);
+        }
+        //if (_typeComponent.CompareTo("null"))
+        //{
+        //    Debug.LogError("Push method SetParameter");z
+        //}
+        //else
+        //{
+            
+        //}
+
     }
 
-    // Update is called once per frame
-    void Update()
+    //public void SetParameter(string locTypeComponet)
+    //{
+    //    _typeComponent = locTypeComponet;
+    //}
+
+    public Transform[] GetArrCellStorage()
     {
-        
+        return _arrCellStorage;
     }
+
+    public void ModifyArrCellStorage(Transform[] locArrCellStorage)
+    {
+        _arrCellStorage = locArrCellStorage;
+    }
+
+
+
 }

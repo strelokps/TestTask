@@ -378,8 +378,9 @@
 "Assets/Peace/Scripts/TerrainSystem.cs"
 "Assets/Peace/Scripts/WorldTerrain.cs"
 "Assets/Script/Buildings/Building.cs"
+"Assets/Script/Buildings/CellStorage.cs"
+"Assets/Script/Buildings/Components.cs"
 "Assets/Script/Buildings/GenerationProduct.cs"
-"Assets/Script/Buildings/Product.cs"
 "Assets/Script/Buildings/Storage.cs"
 "Assets/Script/Buildings/Test.cs"
 -langversion:9.0

@@ -59,21 +59,22 @@
     <Compile Include="Assets\Peace\Core\Util.cs" />
     <Compile Include="Assets\Peace\Scripts\TerrainSystem.cs" />
     <Compile Include="Assets\MapMagic\Compatibility\CTS\CTSOutput.cs" />
+    <Compile Include="Assets\Script\Buildings\Test.cs" />
+    <Compile Include="Assets\Script\Buildings\GenerationProduct.cs" />
     <Compile Include="Assets\Peace\Core\Serialization.cs" />
+    <Compile Include="Assets\Script\Buildings\Building.cs" />
     <Compile Include="Assets\Peace\Core\Profiling.cs" />
     <Compile Include="Assets\Peace\Core\World.cs" />
     <Compile Include="Assets\MapMagic\Compatibility\RTP\RTPOutput.cs" />
+    <Compile Include="Assets\Script\Buildings\Storage.cs" />
     <Compile Include="Assets\Peace\Scripts\RealTimeWorld.cs" />
     <Compile Include="Assets\Peace\Scripts\WorldTerrain.cs" />
     <Compile Include="Assets\Peace\Core\Collector.cs" />
     <Compile Include="Assets\Peace\Core\Assets.cs" />
     <Compile Include="Assets\MapMagic\Compatibility\MegaSplat\MegaSplatOutput.cs" />
     <Compile Include="Assets\Peace\Core\Terrains.cs" />
-    <Compile Include="Assets\Script\Buildings\GenerationProduct.cs" />
-    <Compile Include="Assets\Script\Buildings\Test.cs" />
-    <Compile Include="Assets\Script\Buildings\Storage.cs" />
-    <Compile Include="Assets\Script\Buildings\Product.cs" />
-    <Compile Include="Assets\Script\Buildings\Building.cs" />
+    <Compile Include="Assets\Script\Buildings\Components.cs" />
+    <Compile Include="Assets\Script\Buildings\CellStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Peace\Plugins\Windows\world.dll" />

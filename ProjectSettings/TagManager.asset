@@ -6,6 +6,8 @@ TagManager:
   tags:
   - StorageForComponents
   - StorageForSelfProduct
+  - StorageCell
+  - StartPoint
   layers:
   - Default
   - TransparentFX

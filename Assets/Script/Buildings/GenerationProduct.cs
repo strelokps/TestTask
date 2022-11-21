@@ -5,24 +5,36 @@ using UnityEngine;
 public class GenerationProduct : MonoBehaviour
 {
     [SerializeField] private float _productionFrequency;
-    [SerializeField] private GameObject _prefabProduct;
-    [SerializeField] private GameObject _prefabSelfStorage;
+    private GameObject _storageForComponents;
+    private GameObject _storageForSelfProduct;
+    private Components _componentsFor;
+    private Components _componentsSelf;
     private float _repeat;
 
-    private void Start()
+    public void SetComponets(Components locComponentsFor, Components locComponentsSelf,
+        GameObject locStorageForComponents, GameObject locStorageForSelfProduct)
     {
         _repeat = 0.02f;
         if (_productionFrequency <= 0)
             _productionFrequency = 1f;
-        if (_prefabProduct != null && _prefabSelfStorage != null)
-            StartCoroutine("RepeatGenerationProduct");
 
+        _componentsFor = locComponentsFor;
+        _componentsSelf = locComponentsSelf;
+        _storageForComponents = locStorageForComponents;
+        _storageForSelfProduct = locStorageForSelfProduct;
+
+        StartCoroutine("RepeatGenerationProduct");
     }
+
 
     IEnumerator GenerationProduct_cor()
     {
         yield return new WaitForSeconds(_productionFrequency - _repeat);
-        Debug.Log("Повторить");
+        if (_componentsFor != null & _storageForComponents != null)
+        {
+            //if (_storageForComponents.)
+        }
+
         StartCoroutine("RepeatGenerationProduct");
     }
 
