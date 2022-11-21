@@ -56,35 +56,35 @@
     <Analyzer Include="D:\Visual Studio 2022\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MapMagic\Tools\Spline\Editor\SplineSceneview.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Popup\Item.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\PopupMenu.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Spline\Editor\SplineObjectEditor.cs" />
     <Compile Include="Assets\MapMagic\Tools\SceneEdit\Editor\Select.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixObjectInspector.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Log\Editor\LogWindow.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Padding.cs" />
     <Compile Include="Assets\MapMagic\Tools\GUI\Editor\DragDrop.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\ScrollZoom.cs" />
     <Compile Include="Assets\MapMagic\Tools\Spline\Editor\SplineInspector.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Cell.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Popup\SingleWindow.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Popup\Item.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixWindow.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\StylesCache.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\CellToObj.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Spline\Editor\SplineSceneview.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Editor\AssemblePlugins.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\TexturesCache.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Editor\EditorHacks.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\UI.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\ScrollZoom.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Log\Editor\LogWindow.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixAssetInspector.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Editor\ExtendedTerrainInspector.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Layers.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixObjectInspector.cs" />
     <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Undo.cs" />
     <Compile Include="Assets\MapMagic\Tools\Editor\TimerWindow.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixWindowPlugins.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Cell.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Editor\EditorHacks.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixWindow.cs" />
+    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Padding.cs" />
     <Compile Include="Assets\MapMagic\Tools\SceneEdit\Editor\PolyLine.cs" />
     <Compile Include="Assets\MapMagic\Tools\SceneEdit\Editor\MoveRotateScale.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Popup\SingleWindow.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Layers.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Spline\Editor\SplineObjectEditor.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixAssetInspector.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Editor\AssemblePlugins.cs" />
     <Compile Include="Assets\MapMagic\Tools\GUI\Editor\Draw.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\StylesCache.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\PopupMenu.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\UI.cs" />
-    <Compile Include="Assets\MapMagic\Tools\Editor\ExtendedTerrainInspector.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\TexturesCache.cs" />
-    <Compile Include="Assets\MapMagic\Tools\GUI\Editor\CellToObj.cs" />
+    <Compile Include="Assets\MapMagic\Tools\Matrix\Editor\MatrixWindowPlugins.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\MapMagic\Tools\GUI\Editor\Shaders\Texture.shader" />

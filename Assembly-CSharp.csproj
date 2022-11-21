@@ -58,17 +58,22 @@
   <ItemGroup>
     <Compile Include="Assets\Peace\Core\Util.cs" />
     <Compile Include="Assets\Peace\Scripts\TerrainSystem.cs" />
+    <Compile Include="Assets\MapMagic\Compatibility\CTS\CTSOutput.cs" />
     <Compile Include="Assets\Peace\Core\Serialization.cs" />
     <Compile Include="Assets\Peace\Core\Profiling.cs" />
     <Compile Include="Assets\Peace\Core\World.cs" />
+    <Compile Include="Assets\MapMagic\Compatibility\RTP\RTPOutput.cs" />
     <Compile Include="Assets\Peace\Scripts\RealTimeWorld.cs" />
     <Compile Include="Assets\Peace\Scripts\WorldTerrain.cs" />
     <Compile Include="Assets\Peace\Core\Collector.cs" />
     <Compile Include="Assets\Peace\Core\Assets.cs" />
-    <Compile Include="Assets\Peace\Core\Terrains.cs" />
     <Compile Include="Assets\MapMagic\Compatibility\MegaSplat\MegaSplatOutput.cs" />
-    <Compile Include="Assets\MapMagic\Compatibility\RTP\RTPOutput.cs" />
-    <Compile Include="Assets\MapMagic\Compatibility\CTS\CTSOutput.cs" />
+    <Compile Include="Assets\Peace\Core\Terrains.cs" />
+    <Compile Include="Assets\Script\Buildings\GenerationProduct.cs" />
+    <Compile Include="Assets\Script\Buildings\Test.cs" />
+    <Compile Include="Assets\Script\Buildings\Storage.cs" />
+    <Compile Include="Assets\Script\Buildings\Product.cs" />
+    <Compile Include="Assets\Script\Buildings\Building.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Peace\Plugins\Windows\world.dll" />
@@ -761,14 +766,14 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
@@ -790,25 +795,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="sc.vegetationspawner.editor.csproj">
-      <Project>{82610C0D-1AA6-CF7B-5D11-600F83F52753}</Project>
-      <Name>sc.vegetationspawner.editor</Name>
+    <ProjectReference Include="MapMagic.csproj">
+      <Project>{CC61BCFE-F516-C80C-89CF-ACDFB1175DE8}</Project>
+      <Name>MapMagic</Name>
     </ProjectReference>
     <ProjectReference Include="sc.vegetationspawner.runtime.csproj">
       <Project>{D312FD69-AA97-9DD9-F502-30875D6E3E60}</Project>
       <Name>sc.vegetationspawner.runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Den.Tools.csproj">
+      <Project>{012E0CAC-7E8B-9C12-543E-A7AA8B4CC7B3}</Project>
+      <Name>Den.Tools</Name>
+    </ProjectReference>
     <ProjectReference Include="Den.Tools.Editor.csproj">
       <Project>{3B5EB6CB-ED21-F539-679E-4350BDA18435}</Project>
       <Name>Den.Tools.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MapMagic.csproj">
-      <Project>{CC61BCFE-F516-C80C-89CF-ACDFB1175DE8}</Project>
-      <Name>MapMagic</Name>
-    </ProjectReference>
-    <ProjectReference Include="Den.Tools.csproj">
-      <Project>{012E0CAC-7E8B-9C12-543E-A7AA8B4CC7B3}</Project>
-      <Name>Den.Tools</Name>
+    <ProjectReference Include="sc.vegetationspawner.editor.csproj">
+      <Project>{82610C0D-1AA6-CF7B-5D11-600F83F52753}</Project>
+      <Name>sc.vegetationspawner.editor</Name>
     </ProjectReference>
     <ProjectReference Include="MapMagic.Editor.csproj">
       <Project>{C5B0B9F8-7CB8-62E5-45F4-44BA444AD9A8}</Project>
