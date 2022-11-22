@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CellStorage : MonoBehaviour
 {
-    public string typeComponet;
+    public string typeComponent;
     public bool empty;
+    public GameObject Component;
 }

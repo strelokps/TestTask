@@ -8,6 +8,9 @@ TagManager:
   - StorageForSelfProduct
   - StorageCell
   - StartPoint
+  - RedComp
+  - GreenComp
+  - YellowComp
   layers:
   - Default
   - TransparentFX

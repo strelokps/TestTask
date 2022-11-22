@@ -7,22 +7,23 @@ public class GenerationProduct : MonoBehaviour
     [SerializeField] private float _productionFrequency;
     private GameObject _storageForComponents;
     private GameObject _storageForSelfProduct;
-    private Components _componentsFor;
-    private Components _componentsSelf;
+    private GameObject _componentsFor;
+    private GameObject _componentsSelf;
     private float _repeat;
+    private Storage _storage;
 
-    public void SetComponets(Components locComponentsFor, Components locComponentsSelf,
+
+    public void SetComponents(GameObject locComponentsSelfProduct,
         GameObject locStorageForComponents, GameObject locStorageForSelfProduct)
     {
         _repeat = 0.02f;
         if (_productionFrequency <= 0)
             _productionFrequency = 1f;
 
-        _componentsFor = locComponentsFor;
-        _componentsSelf = locComponentsSelf;
+        _componentsSelf = locComponentsSelfProduct;
         _storageForComponents = locStorageForComponents;
         _storageForSelfProduct = locStorageForSelfProduct;
-
+        _storage = _storageForSelfProduct.GetComponent<Storage>();
         StartCoroutine("RepeatGenerationProduct");
     }
 
@@ -30,11 +31,15 @@ public class GenerationProduct : MonoBehaviour
     IEnumerator GenerationProduct_cor()
     {
         yield return new WaitForSeconds(_productionFrequency - _repeat);
-        if (_componentsFor != null & _storageForComponents != null)
+        if (_componentsSelf != null & _storageForSelfProduct != null)
         {
-            //if (_storageForComponents.)
-        }
+            if (_storage.GetEmptyCellStorage().Count > 0)
+            {
+                _storage.PushComponent(_componentsSelf);
+            }
 
+            Debug.Log($"count = {_storage.GetEmptyCellStorage().Count}");
+        }
         StartCoroutine("RepeatGenerationProduct");
     }
 
@@ -43,4 +48,6 @@ public class GenerationProduct : MonoBehaviour
         yield return new WaitForSeconds(0.02f);
         StartCoroutine("GenerationProduct_cor");
     }
+
+   
 }

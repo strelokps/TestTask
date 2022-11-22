@@ -12,13 +12,15 @@ public class Test : MonoBehaviour
 
     IEnumerator GenerationProduct_cor()
     {
+        Debug.Log("Start Повторить");
         yield return new WaitForSeconds(1);
         Debug.Log("Повторить");
+        StartCoroutine("RepeatGenerationProduct");
     }
 
     IEnumerator RepeatGenerationProduct()
     {
         yield return new WaitForSeconds(0.02f);
-        StartCoroutine("GenerationProduct");
+        StartCoroutine("GenerationProduct_cor");
     }
 }

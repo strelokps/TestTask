@@ -6,12 +6,16 @@ public class Building : MonoBehaviour
 {
     private GameObject _storageForComponents;
     private GameObject _storageForSelfProduct;
-    private Components _componentsFor;
-    private Components _componentsSelf;
+    //можно грузить через ScriptableObject
+    [SerializeField] private GameObject _componentForProduction;
+    [SerializeField] private GameObject _componentSelf;
+    private GenerationProduct _generationProduct;
+
 
     private void Start()
     {
-
+        _generationProduct = GetComponent<GenerationProduct>();
+        if (_generationProduct == null) Debug.LogError("_generationProduct = null");
 
         foreach (Transform child in transform)
         {
@@ -25,7 +29,13 @@ public class Building : MonoBehaviour
                 _storageForSelfProduct = child.gameObject;
             }
         }
+        _generationProduct.SetComponents(_componentSelf, _storageForComponents,
+            _storageForSelfProduct);
 
+    }
 
+    private void PushConponentOnStorage(GameObject locGOComponent)
+    {
+        _storageForSelfProduct.GetComponent<Storage>().PushComponent(locGOComponent);
     }
 }

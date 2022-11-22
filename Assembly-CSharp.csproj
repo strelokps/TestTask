@@ -61,6 +61,7 @@
     <Compile Include="Assets\MapMagic\Compatibility\CTS\CTSOutput.cs" />
     <Compile Include="Assets\Script\Buildings\Test.cs" />
     <Compile Include="Assets\Script\Buildings\GenerationProduct.cs" />
+    <Compile Include="Assets\Script\Buildings\Components.cs" />
     <Compile Include="Assets\Peace\Core\Serialization.cs" />
     <Compile Include="Assets\Script\Buildings\Building.cs" />
     <Compile Include="Assets\Peace\Core\Profiling.cs" />
@@ -73,7 +74,6 @@
     <Compile Include="Assets\Peace\Core\Assets.cs" />
     <Compile Include="Assets\MapMagic\Compatibility\MegaSplat\MegaSplatOutput.cs" />
     <Compile Include="Assets\Peace\Core\Terrains.cs" />
-    <Compile Include="Assets\Script\Buildings\Components.cs" />
     <Compile Include="Assets\Script\Buildings\CellStorage.cs" />
   </ItemGroup>
   <ItemGroup>

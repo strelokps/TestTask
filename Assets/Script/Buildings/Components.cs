@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 
-public class Components 
+public class Components : MonoBehaviour
 {
     private string _typeProduct ;
     public string _prpType
