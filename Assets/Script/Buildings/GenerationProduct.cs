@@ -5,6 +5,7 @@ using UnityEngine;
 public class GenerationProduct : MonoBehaviour
 {
     [SerializeField] private float _productionFrequency;
+    [SerializeField] private float _tempProductionFrequency;
     private GameObject _storageForComponents;
     private GameObject _storageForSelfProduct;
     private GameObject _componentsFor;
@@ -37,6 +38,14 @@ public class GenerationProduct : MonoBehaviour
             {
                 _storage.PushComponent(_componentsSelf);
             }
+            else
+            {
+                transform.GetComponent<Building>().OnOffUIText();
+                _tempProductionFrequency = _productionFrequency;
+                _productionFrequency = 10;
+                StartCoroutine("CheckEmptyCell");
+
+            }
 
             Debug.Log($"count = {_storage.GetEmptyCellStorage().Count}");
         }
@@ -49,5 +58,16 @@ public class GenerationProduct : MonoBehaviour
         StartCoroutine("GenerationProduct_cor");
     }
 
-   
+
+    IEnumerator CheckEmptyCell()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (_storage.GetEmptyCellStorage().Count > 0)
+        {
+            _productionFrequency = _tempProductionFrequency;
+
+        }
+        StartCoroutine("GenerationProduct_cor");
+    }
+
 }

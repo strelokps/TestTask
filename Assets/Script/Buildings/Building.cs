@@ -10,10 +10,18 @@ public class Building : MonoBehaviour
     [SerializeField] private GameObject _componentForProduction;
     [SerializeField] private GameObject _componentSelf;
     private GenerationProduct _generationProduct;
+    private Transform _transformUIText;
 
 
     private void Start()
     {
+        for (int i = 0; i < UImain._uiMainCanvasText.Length; i++)
+        {
+            if (UImain._uiMainCanvasText[i].CompareTag(gameObject.name))
+                _transformUIText = UImain._uiMainCanvasText[i];
+        }
+
+
         _generationProduct = GetComponent<GenerationProduct>();
         if (_generationProduct == null) Debug.LogError("_generationProduct = null");
 
@@ -37,5 +45,26 @@ public class Building : MonoBehaviour
     private void PushConponentOnStorage(GameObject locGOComponent)
     {
         _storageForSelfProduct.GetComponent<Storage>().PushComponent(locGOComponent);
+    }
+
+    public void OnOffUIText()
+    {
+        if (_transformUIText.gameObject.activeSelf)
+        {
+            _transformUIText.gameObject.SetActive(false);
+        }
+        else
+        {
+            _transformUIText.gameObject.SetActive(true);
+            StartCoroutine("OffUIText");
+        }
+
+
+    }
+
+    IEnumerator OffUIText()
+    {
+        yield return new WaitForSeconds(4f);
+        OnOffUIText();
     }
 }

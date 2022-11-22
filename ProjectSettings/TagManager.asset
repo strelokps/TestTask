@@ -11,6 +11,9 @@ TagManager:
   - RedComp
   - GreenComp
   - YellowComp
+  - Yellow Building
+  - Red Building
+  - Green Building
   layers:
   - Default
   - TransparentFX

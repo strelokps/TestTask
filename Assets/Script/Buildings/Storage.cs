@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Storage : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Storage : MonoBehaviour
     [SerializeField] private List<Transform> _fillCellStorage;
     private int _countEmptyArr;
     private int _countFillArr;
+    private Text _uiTestOutSpace;
 
 
 
